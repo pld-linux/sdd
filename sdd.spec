@@ -1,4 +1,5 @@
 Summary:	disk dump and restore to and from tape or file
+Summary(pl):	Narzêdzia do zrzutów i odtwarzania dysku do/z ta¶my lub pliku
 Name:		sdd
 Version:	1.31
 Release:	0.1
@@ -12,14 +13,27 @@ sdd is a replacement for a program called 'dd'. sdd is much faster
 than dd in cases where input block size (ibs) is not equal to the
 output block size (obs). Statistics are more easily understoon than
 those from 'dd'. Timing available, -time option will print transfer
-speed Timing & Statistics available at any time with SIGQUIT (^\) Can
-seek on input and output Fast null input Fast null output. Support for
-the RMT (Remote Tape Server) protocol makes remote I/O fast and easy.
+speed. Timing & Statistics available at any time with SIGQUIT (^\).
+Can seek on input and output. Fast null input. Fast null output.
+Support for the RMT (Remote Tape Server) protocol makes remote I/O
+fast and easy.
+
+%description -l pl
+sdd to zamiennik programu o nazwie "dd". sdd jest o wiele szybszy ni¿
+dd w przypadkach, kiedy rozmiar bloku wej¶ciowego (ibs) nie jest równy
+rozmiarowi bloku wyj¶ciowego (obs). Statystyki s± bardziej zrozumia³e
+od tych podawanych przez dd. Dostêpny jest pomiar czasu - opcja -time
+wypisuje szybko¶æ transweru. Czas i statystyka s± dostêpne w ka¿dej
+chwili przez SIGQUIT (^\). Mo¿e ustawiaæ pozycjê w pliku wej¶ciowym i
+wyj¶ciowym; szybkie wczytywanie i zapis pustej zawarto¶ci. Obs³uga
+protoko³u RMT (Remote Tape Server) czyni zdalne wej¶cie/wyj¶cie
+szybkim i ³atwym.
 
 %prep
 %setup -q
 
 %build
+# TODO: CC and CFLAGS
 %{__make}
 
 %install
