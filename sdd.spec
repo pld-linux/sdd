@@ -2,7 +2,7 @@ Summary:	disk dump and restore to and from tape or file
 Summary(pl):	Narzêdzia do zrzutów i odtwarzania dysku do/z ta¶my lub pliku
 Name:		sdd
 Version:	1.31
-Release:	0.1
+Release:	1
 License:	GPL v2
 Group:		Applications/System
 Source0:	ftp://ftp.fokus.gmd.de/pub/unix/sdd/%{name}-%{version}.tar.gz
@@ -34,14 +34,17 @@ szybkim i ³atwym.
 %setup -q
 
 %build
-# TODO: CC and CFLAGS
-%{__make}
+#fix locate mandir
+sed -i 's/$(MANDIR)\/$(MANSECT)/share\/$(MANDIR)\/$(MANSECT)/' RULES/rules.man
+
+MAKEPROG=gmake
+export MAKEPROG
+%{__make} COPTS="%{rpmcflags}" CC="%{__cc}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man4}
-
-install sdd/OBJ/amd_athlon-tm-_processor-linux-cc/sdd $RPM_BUILD_ROOT%{_bindir}
+%{__make} install \
+	INS_BASE=$RPM_BUILD_ROOT%{_prefix}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -50,3 +53,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README AN-%{version}
 %attr(755,root,root) %{_bindir}/*
+%{_mandir}/man1/sdd.1.*
+%lang(de) %{_mandir}/de/man1/sdd.1.*
