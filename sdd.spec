@@ -7,6 +7,7 @@ License:	GPL v2
 Group:		Applications/System
 Source0:	ftp://ftp.fokus.gmd.de/pub/unix/sdd/%{name}-%{version}.tar.gz
 # Source0-md5:	430783f281d22e408c74ce1cb472a059
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -34,6 +35,7 @@ szybkim i ³atwym.
 %setup -q
 
 %build
+cp /usr/share/automake/config.sub conf/
 #fix locate mandir
 sed -i 's/$(MANDIR)\/$(MANSECT)/share\/$(MANDIR)\/$(MANSECT)/' RULES/rules.man
 
