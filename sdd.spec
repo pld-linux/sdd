@@ -8,6 +8,7 @@ Group:		Applications/System
 Source0:	ftp://ftp.berlios.de/pub/sdd/%{name}-%{version}.tar.gz
 # Source0-md5:	430783f281d22e408c74ce1cb472a059
 BuildRequires:	automake
+BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
