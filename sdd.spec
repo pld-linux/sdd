@@ -6,6 +6,7 @@ Release:	0.1
 License:	GPL v2
 Group:		Applications/System
 Source0:	ftp://ftp.fokus.gmd.de/pub/unix/sdd/%{name}-%{version}.tar.gz
+# Source0-md5:	430783f281d22e408c74ce1cb472a059
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
