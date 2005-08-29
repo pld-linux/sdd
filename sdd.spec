@@ -32,6 +32,30 @@ wyj¶ciowym; szybkie wczytywanie i zapis pustej zawarto¶ci. Obs³uga
 protoko³u RMT (Remote Tape Server) czyni zdalne wej¶cie/wyj¶cie
 szybkim i ³atwym.
 
+%package devel
+Summary:	Header file for sdd
+Summary(pl):	Pliki nag³ówkowe bibliotek sdd
+Group:		Development/Libraries
+Requires:	%{name} = %{version}-%{release}
+
+%description devel
+sdd header files.
+
+%description devel -l pl
+Pliki nag³ówkowe bibliotek sdd.
+
+%package static
+Summary:	Static libraries for sdd
+Summary(pl):	Statyczne biblioteki dla sdd
+Group:		Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
+
+%description static
+sdd static libraries.
+
+%description static -l pl
+Biblioteki statyczne dla sdd.
+
 %prep
 %setup -q
 
@@ -42,10 +66,13 @@ sed -i 's/$(MANDIR)\/$(MANSECT)/share\/$(MANDIR)\/$(MANSECT)/' RULES/rules.man
 
 MAKEPROG=gmake
 export MAKEPROG
-%{__make} COPTS="%{rpmcflags}" CC="%{__cc}"
+%{__make} \
+	COPTS="%{rpmcflags}" \
+	CC="%{__cc}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %{__make} install \
 	INS_BASE=$RPM_BUILD_ROOT%{_prefix}
 
@@ -57,4 +84,14 @@ rm -rf $RPM_BUILD_ROOT
 %doc README AN-%{version}
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/sdd.1.*
+%{_mandir}/man3/*.3.*
+%{_mandir}/man5/make*.5.*
 %lang(de) %{_mandir}/de/man1/sdd.1.*
+
+%files devel
+%defattr(644,root,root,755)
+%{_includedir}/*.h
+
+%files static
+%defattr(644,root,root,755)
+%{_libdir}/lib*.a
