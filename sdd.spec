@@ -2,7 +2,7 @@ Summary:	disk dump and restore to and from tape or file
 Summary(pl):	Narzêdzia do zrzutów i odtwarzania dysku do/z ta¶my lub pliku
 Name:		sdd
 Version:	1.52
-Release:	0.1
+Release:	0.2
 License:	GPL v2
 Group:		Applications/System
 Source0:	ftp://ftp.berlios.de/pub/sdd/%{name}-%{version}.tar.gz
