@@ -83,10 +83,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README AN-%{version}
 %attr(755,root,root) %{_bindir}/*
-%{_mandir}/man1/sdd.1.*
-%{_mandir}/man3/*.3.*
-%{_mandir}/man5/make*.5.*
-%lang(de) %{_mandir}/de/man1/sdd.1.*
+%{_mandir}/man1/sdd.1*
+%{_mandir}/man3/*.3*
+%{_mandir}/man5/make*.5*
+%lang(de) %{_mandir}/de/man1/sdd.1*
 
 %files devel
 %defattr(644,root,root,755)
