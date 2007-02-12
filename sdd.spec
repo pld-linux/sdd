@@ -1,5 +1,5 @@
 Summary:	disk dump and restore to and from tape or file
-Summary(pl.UTF-8):   Narzędzia do zrzutów i odtwarzania dysku do/z taśmy lub pliku
+Summary(pl.UTF-8):	Narzędzia do zrzutów i odtwarzania dysku do/z taśmy lub pliku
 Name:		sdd
 Version:	1.52
 Release:	0.2
@@ -34,7 +34,7 @@ szybkim i łatwym.
 
 %package devel
 Summary:	Header file for sdd
-Summary(pl.UTF-8):   Pliki nagłówkowe bibliotek sdd
+Summary(pl.UTF-8):	Pliki nagłówkowe bibliotek sdd
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -46,7 +46,7 @@ Pliki nagłówkowe bibliotek sdd.
 
 %package static
 Summary:	Static libraries for sdd
-Summary(pl.UTF-8):   Statyczne biblioteki dla sdd
+Summary(pl.UTF-8):	Statyczne biblioteki dla sdd
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
