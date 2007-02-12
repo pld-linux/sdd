@@ -1,5 +1,5 @@
 Summary:	disk dump and restore to and from tape or file
-Summary(pl):	NarzÍdzia do zrzutÛw i odtwarzania dysku do/z ta∂my lub pliku
+Summary(pl.UTF-8):   Narzƒôdzia do zrzut√≥w i odtwarzania dysku do/z ta≈õmy lub pliku
 Name:		sdd
 Version:	1.52
 Release:	0.2
@@ -21,39 +21,39 @@ Can seek on input and output. Fast null input. Fast null output.
 Support for the RMT (Remote Tape Server) protocol makes remote I/O
 fast and easy.
 
-%description -l pl
-sdd to zamiennik programu o nazwie "dd". sdd jest o wiele szybszy niø
-dd w przypadkach, kiedy rozmiar bloku wej∂ciowego (ibs) nie jest rÛwny
-rozmiarowi bloku wyj∂ciowego (obs). Statystyki s± bardziej zrozumia≥e
-od tych podawanych przez dd. DostÍpny jest pomiar czasu - opcja -time
-wypisuje szybko∂Ê transweru. Czas i statystyka s± dostÍpne w kaødej
-chwili przez SIGQUIT (^\). Moøe ustawiaÊ pozycjÍ w pliku wej∂ciowym i
-wyj∂ciowym; szybkie wczytywanie i zapis pustej zawarto∂ci. Obs≥uga
-protoko≥u RMT (Remote Tape Server) czyni zdalne wej∂cie/wyj∂cie
-szybkim i ≥atwym.
+%description -l pl.UTF-8
+sdd to zamiennik programu o nazwie "dd". sdd jest o wiele szybszy ni≈º
+dd w przypadkach, kiedy rozmiar bloku wej≈õciowego (ibs) nie jest r√≥wny
+rozmiarowi bloku wyj≈õciowego (obs). Statystyki sƒÖ bardziej zrozumia≈Çe
+od tych podawanych przez dd. Dostƒôpny jest pomiar czasu - opcja -time
+wypisuje szybko≈õƒá transweru. Czas i statystyka sƒÖ dostƒôpne w ka≈ºdej
+chwili przez SIGQUIT (^\). Mo≈ºe ustawiaƒá pozycjƒô w pliku wej≈õciowym i
+wyj≈õciowym; szybkie wczytywanie i zapis pustej zawarto≈õci. Obs≈Çuga
+protoko≈Çu RMT (Remote Tape Server) czyni zdalne wej≈õcie/wyj≈õcie
+szybkim i ≈Çatwym.
 
 %package devel
 Summary:	Header file for sdd
-Summary(pl):	Pliki nag≥Ûwkowe bibliotek sdd
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe bibliotek sdd
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 sdd header files.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe bibliotek sdd.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe bibliotek sdd.
 
 %package static
 Summary:	Static libraries for sdd
-Summary(pl):	Statyczne biblioteki dla sdd
+Summary(pl.UTF-8):   Statyczne biblioteki dla sdd
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 sdd static libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteki statyczne dla sdd.
 
 %prep
